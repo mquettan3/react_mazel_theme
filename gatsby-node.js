@@ -9,9 +9,30 @@
 
 // Note:  Used for development ONLY - Remove for production!
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
-    if (stage === `develop`) {
+  }
+
+exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
+  switch (stage) {
+    case 'build-html':
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /wowjs/,
+              use: [loaders.null()]
+            },
+            {
+              test: /bootstrap/,
+              use: [loaders.null()]
+            }
+          ]
+        }
+      });
+      break;
+    case 'develop':
       actions.setWebpackConfig({
         devtool: `cheap-module-source-map`,
       })
-    }
+      break;
   }
+};

@@ -7,6 +7,7 @@ import React, { useEffect } from "react"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import $ from 'jquery'
 import Scrollspy from 'react-scrollspy'
 import smoothscroll from 'smoothscroll-polyfill'
 import WOW from 'wowjs'
