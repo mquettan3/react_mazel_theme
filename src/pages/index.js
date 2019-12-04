@@ -5,10 +5,10 @@ import React, { useEffect, useRef, useState } from "react"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import $ from 'jquery'
-import Scrollspy from 'react-scrollspy'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faLinkedin, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
+// import $ from 'jquery'
+// import Scrollspy from 'react-scrollspy'
 import smoothscroll from 'smoothscroll-polyfill'
 import WOW from 'wowjs'
 
@@ -16,41 +16,41 @@ import Avatar01 from "../images/avatar01.jpg";
 import LogoLight from "../images/logo-light.png";
 import LogoDark from "../images/logo-dark.png";
 import Image02 from "../images/full/02.jpg";
-import Image05 from "../images/full/05.jpg";
+// import Image05 from "../images/full/05.jpg";
 import Image06 from "../images/full/06.jpg";
-import Image09 from "../images/full/09.jpg";
+// import Image09 from "../images/full/09.jpg";
 import Image14 from "../images/full/14.jpg";
-import Image15 from "../images/full/15.jpg";
-import Image20 from "../images/full/20.jpg";
+// import Image15 from "../images/full/15.jpg";
+// import Image20 from "../images/full/20.jpg";
 import Image34 from "../images/full/34.jpg";
 import Image33 from "../images/full/33.jpg";
-import TeamImage01 from "../images/team/01.jpg";
-import TeamImage02 from "../images/team/02.jpg";
-import TeamImage03 from "../images/team/03.jpg";
-import TeamImage04 from "../images/team/04.jpg";
-import TeamImage06 from "../images/team/06.jpg";
-import TeamImage07 from "../images/team/07.jpg";
+// import TeamImage01 from "../images/team/01.jpg";
+// import TeamImage02 from "../images/team/02.jpg";
+// import TeamImage03 from "../images/team/03.jpg";
+// import TeamImage04 from "../images/team/04.jpg";
+// import TeamImage06 from "../images/team/06.jpg";
+// import TeamImage07 from "../images/team/07.jpg";
 import LogoImage01 from "../images/logos/01.png";
 import LogoImage02 from "../images/logos/02.png";
 import LogoImage03 from "../images/logos/03.png";
 import LogoImage04 from "../images/logos/04.png";
 import LogoImage05 from "../images/logos/05.png";
 import LogoImage06 from "../images/logos/06.png";
-import LogoImage07 from "../images/logos/07.png";
+// import LogoImage07 from "../images/logos/07.png";
 import LogoImage08 from "../images/logos/08.png";
 import Mockup01 from "../images/mockup01.png";
 import Mockup02 from "../images/mockup02.png";
 import Mockup03 from "../images/mockup03.png";
 import Signature from "../images/signature.png";
-import Thumb01 from "../images/portfolio/thumb/01.jpg";
-import Thumb02 from "../images/portfolio/thumb/02.jpg";
-import Thumb03 from "../images/portfolio/thumb/03.jpg";
-import Thumb04 from "../images/portfolio/thumb/04.jpg";
-import Thumb05 from "../images/portfolio/thumb/05.jpg";
-import Thumb06 from "../images/portfolio/thumb/06.jpg";
-import Thumb07 from "../images/portfolio/thumb/07.jpg";
-import Thumb08 from "../images/portfolio/thumb/08.jpg";
-import Thumb09 from "../images/portfolio/thumb/09.jpg";
+// import Thumb01 from "../images/portfolio/thumb/01.jpg";
+// import Thumb02 from "../images/portfolio/thumb/02.jpg";
+// import Thumb03 from "../images/portfolio/thumb/03.jpg";
+// import Thumb04 from "../images/portfolio/thumb/04.jpg";
+// import Thumb05 from "../images/portfolio/thumb/05.jpg";
+// import Thumb06 from "../images/portfolio/thumb/06.jpg";
+// import Thumb07 from "../images/portfolio/thumb/07.jpg";
+// import Thumb08 from "../images/portfolio/thumb/08.jpg";
+// import Thumb09 from "../images/portfolio/thumb/09.jpg";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
@@ -106,20 +106,20 @@ const IndexPage = () => {
             <div id="header" className={"header " + (isFixHeader ? "header-fixed " : "") + (isPrepareHeader ? "header-prepare " : "")}>
                 <div className="header-inner">
                     <div className="logo">
-                        <a href="#">
-                            <img src={LogoLight} />
+                        <a href="#intro">
+                            <img src={LogoLight} alt="logo"/>
                         </a>
                     </div>
 
                     <div className="nav-menu-icon">
-                        <a><i className="fa fa-bars"></i></a>
+                        <div><i className="fa fa-bars"></i></div>
                     </div>
 
                     <div className="nav-menu singlepage-nav">
                         <ul className="nav-menu-inner">
                             <li><a href="#intro" onClick={handleNavMenuItemClick}>Home</a></li>
                             <li>
-                                <a href="#" className="menu-has-sub" onClick={handleNavMenuItemClick}>Demos <i className="fa fa-angle-down"></i></a>
+                                <a href="#intro" className="menu-has-sub" onClick={handleNavMenuItemClick}>Demos <i className="fa fa-angle-down"></i></a>
                                 <ul className="sub-dropdown dropdown">
                                     <li><a className="nav-external" href="index.html">Home - Main</a></li>
                                     <li><a className="nav-external" href="index2-slider_vertical.html">Home - Vertical Slider</a></li>
@@ -133,13 +133,13 @@ const IndexPage = () => {
                                     <li><a className="nav-external" href="index10-bg_slideshow.html">Home - Bg Slideshow</a></li>
                                     <li><a className="nav-external" href="index11-coming_soon.html">Home - Coming Soon Page</a></li>
                                     <li>
-                                        <a className="menu-has-sub nav-external">Sub Dropdown<i className="fa fa-angle-right"></i></a>
+                                        <div className="menu-has-sub nav-external">Sub Dropdown<i className="fa fa-angle-right"></i></div>
                                         <ul className="sub-dropdown">
-                                            <li><a className="nav-external" href="#">Sub Menu 1</a></li>
-                                            <li><a className="nav-external" href="#">Sub Menu 2</a></li>
-                                            <li><a className="nav-external" href="#">Sub Menu 3</a></li>
-                                            <li><a className="nav-external" href="#">Sub Menu 4</a></li>
-                                            <li><a className="nav-external" href="#">Sub Menu 5</a></li>
+                                            <li><a className="nav-external" href="#intro">Sub Menu 1</a></li>
+                                            <li><a className="nav-external" href="#intro">Sub Menu 2</a></li>
+                                            <li><a className="nav-external" href="#intro">Sub Menu 3</a></li>
+                                            <li><a className="nav-external" href="#intro">Sub Menu 4</a></li>
+                                            <li><a className="nav-external" href="#intro">Sub Menu 5</a></li>
                                         </ul>
                                     </li>
 
@@ -215,271 +215,14 @@ const IndexPage = () => {
                 </div>
             </section>
 
-            <section id="Statement1" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" data-background-img={Image33}>
+            <section id="Statement1" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image33 + ")"}}>
                 <div className="container">
                     <p className="max-width-700 lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam aperiam.</p>
-                    <a className="btn btn-md btn-color">Download</a>
-                </div>
-            </section>
-
-            <section id="team-people" className="section-padding text-center">
-                <div className="container">
-                    <h2 className="page-title">Our <span className="text-light">Team</span></h2>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="owl-carousel team-carousel nf-carousel-theme">
-
-                            <div className="item">
-                                <div className="team-item">
-                                    <div className="team-item-img">
-                                        <img src={TeamImage01} alt="" />
-                                        <div className="team-item-detail">
-                                            <div className="team-item-detail-inner light-color">
-                                                <h5>Mitchell KAPPOS</h5>
-                                                <p>To portal for some of the world's most high-value net.</p>
-                                                <ul className="social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.dribbble.com/" target="_blank"><i className="fa fa-dribbble"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/" target="_blank"><i className="fa fa-pinterest"></i></a></li>
-                                                    <li><a href="https://www.behance.net/" target="_blank"><i className="fa fa-behance"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="team-item-info">
-                                        <h6>Mitchell KAPPOS</h6>
-                                        <p className="">( Graphic Designer )</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="team-item">
-                                    <div className="team-item-img">
-                                        <img src={TeamImage03} alt="" />
-                                        <div className="team-item-detail">
-                                            <div className="team-item-detail-inner light-color">
-                                                <h5>Leonardo da Vinci</h5>
-                                                <p>To portal for some of the world's most high-value net.</p>
-                                                <ul className="social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.dribbble.com/" target="_blank"><i className="fa fa-dribbble"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/" target="_blank"><i className="fa fa-pinterest"></i></a></li>
-                                                    <li><a href="https://www.behance.net/" target="_blank"><i className="fa fa-behance"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="team-item-info">
-                                        <h6>Leonardo da Vinci</h6>
-                                        <p className="">( Front-End Dev )</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="team-item">
-                                    <div className="team-item-img">
-                                        <img src={TeamImage07} alt="" />
-                                        <div className="team-item-detail">
-                                            <div className="team-item-detail-inner light-color">
-                                                <h5>John Doe</h5>
-                                                <p>To portal for some of the world's most high-value net.</p>
-                                                <ul className="social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.dribbble.com/" target="_blank"><i className="fa fa-dribbble"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/" target="_blank"><i className="fa fa-pinterest"></i></a></li>
-                                                    <li><a href="https://www.behance.net/" target="_blank"><i className="fa fa-behance"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="team-item-info">
-                                        <h6>John Doe</h6>
-                                        <p className="">( Project Manager )</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="team-item">
-                                    <div className="team-item-img">
-                                        <img src={TeamImage04} alt="" />
-                                        <div className="team-item-detail">
-                                            <div className="team-item-detail-inner light-color">
-                                                <h5>Michael Lee</h5>
-                                                <p>To portal for some of the world's most high-value net.</p>
-                                                <ul className="social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.dribbble.com/" target="_blank"><i className="fa fa-dribbble"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/" target="_blank"><i className="fa fa-pinterest"></i></a></li>
-                                                    <li><a href="https://www.behance.net/" target="_blank"><i className="fa fa-behance"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="team-item-info">
-                                        <h6>Michael Lee</h6>
-                                        <p className="">( Web Developer )</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="team-item">
-                                    <div className="team-item-img">
-                                        <img src={TeamImage02} alt="" />
-                                        <div className="team-item-detail">
-                                            <div className="team-item-detail-inner light-color">
-                                                <h5>Michael Lee</h5>
-                                                <p>To portal for some of the world's most high-value net.</p>
-                                                <ul className="social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.dribbble.com/" target="_blank"><i className="fa fa-dribbble"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/" target="_blank"><i className="fa fa-pinterest"></i></a></li>
-                                                    <li><a href="https://www.behance.net/" target="_blank"><i className="fa fa-behance"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="team-item-info">
-                                        <h6>Michael Lee</h6>
-                                        <p className="">Photographer</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="team-item">
-                                    <div className="team-item-img">
-                                        <img src={TeamImage06} alt="" />
-                                        <div className="team-item-detail">
-                                            <div className="team-item-detail-inner light-color">
-                                                <h5>Michael Lee</h5>
-                                                <p>To portal for some of the world's most high-value net.</p>
-                                                <ul className="social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.dribbble.com/" target="_blank"><i className="fa fa-dribbble"></i></a></li>
-                                                    <li><a href="https://www.pinterest.com/" target="_blank"><i className="fa fa-pinterest"></i></a></li>
-                                                    <li><a href="https://www.behance.net/" target="_blank"><i className="fa fa-behance"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="team-item-info">
-                                        <h6>Michael Lee</h6>
-                                        <p className="">Photographer</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    <a className="btn btn-md btn-color" href="#intro">Download</a>
                 </div>
             </section>
 
             <hr />
-
-            <section id="accordian_skills" className="section-padding">
-                <div className="container text-center">
-                    <h2 className="page-title">Skills <span className="text-light">&</span> History</h2>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 col-sm-12 mb-sm-30">
-                            <div className="accordion">
-                                <div className="accordion-title">
-                                    <a href="">Jan 14, 2008 (Opening)</a>
-                                </div>
-                                <div className="accordion-content">
-                                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
-                                </div>
-                                <div className="accordion-title">
-                                    <a href="">FEB 18, 2011 (The best company of the year)</a>
-                                </div>
-                                <div className="accordion-content">
-                                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
-                                </div>
-                                <div className="accordion-title">
-                                    <a href="">APR 6, 2013 (Opening </a>
-                                </div>
-                                <div className="accordion-content">
-                                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-md-6 col-sm-12">
-                            <div className="skillbar" data-percent="55%">
-                                <h6 className="skillbar-title">Design</h6>
-                                <div className="skill-bar-percent">55%</div>
-                                <div className="skillbar-bar">
-                                    <div className="skillbar-bar-child"></div>
-                                </div>
-                            </div>
-
-                            <div className="skillbar" data-percent="80%">
-                                <h6 className="skillbar-title">Development</h6>
-                                <div className="skill-bar-percent">80%</div>
-                                <div className="skillbar-bar">
-                                    <div className="skillbar-bar-child"></div>
-                                </div>
-                            </div>
-
-                            <div className="skillbar" data-percent="40%">
-                                <h6 className="skillbar-title">Photography</h6>
-                                <div className="skill-bar-percent">40%</div>
-                                <div className="skillbar-bar">
-                                    <div className="skillbar-bar-child"></div>
-                                </div>
-                            </div>
-
-                            <div className="skillbar" data-percent="70%">
-                                <h6 className="skillbar-title">Branding</h6>
-                                <div className="skill-bar-percent">70%</div>
-                                <div className="skillbar-bar">
-                                    <div className="skillbar-bar-child"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" data-background-img={Image06}>
-                <div className="container">
-                    <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
-                        <div className="item">
-                            <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
-                                <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
-                                <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
-                                <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section id="process" className="section-padding">
                 <div className="container text-center">
@@ -527,6 +270,34 @@ const IndexPage = () => {
                 </div>
             </section>
 
+            <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image06 + ")"}}>
+                <div className="container">
+                    <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
+                        <div className="item">
+                            <div className="testimonial text-center max-width-700">
+                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
+                                <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="testimonial text-center max-width-700">
+                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
+                                <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="testimonial text-center max-width-700">
+                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
+                                <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <hr />
 
             <section id="latest-work" className="section-padding">
@@ -547,7 +318,7 @@ const IndexPage = () => {
                                         <li>Branding Design</li>
                                         <li>Web Design</li>
                                     </ul>
-                                    <a target="_blank" href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
+                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -562,7 +333,7 @@ const IndexPage = () => {
                                         <li>Fully Responsive</li>
                                         <li>Web Design</li>
                                     </ul>
-                                    <a target="_blank" href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
+                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
                                 </div>
                                 <div className="col-md-6 offset-md-1">
                                     <img src={Mockup01} alt="" />
@@ -582,255 +353,10 @@ const IndexPage = () => {
                                     <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
                                     <p>porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet</p>
                                     <div className="spacer-15"></div>
-                                    <a target="_blank" href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
+                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio" className="section-padding-t gray-bg">
-                <div className="container text-center">
-                    <h2>Our <span className="text-light">Portfolio</span></h2>
-                </div>
-                <div className="container-fluid">
-                    <div className="row">
-                        <ul className="col portfolio-filter categories-filter">
-                            <li><a className="categories active" data-filter="*">All</a></li>
-                            <li><a className="categories" data-filter=".branding">Branding</a></li>
-                            <li><a className="categories" data-filter=".creative">Creative</a></li>
-                            <li><a className="categories" data-filter=".photography">Photography</a></li>
-                            <li><a className="categories" data-filter=".coffee">coffee</a></li>
-                        </ul>
-
-                    </div>
-                    <div className="portfolio-grid-fit row gallery-popup">
-                        <div className="portfolio-item branding photography coffee">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb01} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 01"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb02} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 02"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item branding photography">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb03} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 03"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item creative">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb04} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 04"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item creative">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb05} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 05"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item branding photography">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb06} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 06"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item branding creative coffee">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb07} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 07"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="portfolio-item photography">
-                            <div className="portfolio-box">
-                                <a className="portfolio-image-wrap">
-                                    <img src={Thumb08} alt="" /></a>
-                                <div className="portfolio-caption">
-                                    <div className="portfolio-caption-tb">
-                                        <div className="portfolio-caption-tb-cell">
-                                            <h5>Digital Camera mockup</h5>
-                                            <p>Mockup - Photography - Graphic - Branding</p>
-                                            <ul className="portfolio-btn-wraper">
-                                                <li>
-                                                    <a className="gallery-popup-link btn btn-color" href="https://www.google.com/" title="Portfolio Image 08"><i className="fa fa-search"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.dribbble.com/"><i className="fa fa-dribbble"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.pinterest.com/"><i className="fa fa-pinterest"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a className="btn btn-black" target="_blank" href="https://www.behance.net/"><i className="fa fa-behance"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
@@ -841,7 +367,7 @@ const IndexPage = () => {
                         <h4 className="action-box-title">Powerfull Onepage Multipurpose Responsive Template ?</h4>
                     </div>
                     <div className="action-box-right">
-                        <a className="btn btn-md btn-color" href="http://google.com/" target="_blank">See More</a>
+                        <button className="btn btn-md btn-color" href="http://google.com/">See More</button>
                     </div>
                 </div>
             </section>
@@ -905,7 +431,7 @@ const IndexPage = () => {
                 </div>
             </section>
 
-            <section id="counter" className="section-padding bg-image overlay-dark dark-bg" data-stellar-background-ratio="0.5" data-background-img={Image14}>
+            <section id="counter" className="section-padding bg-image overlay-dark dark-bg" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image14 + ")"}}>
                 <div className="container text-center">
                     <div className="row">
                         <div className="col-md-3 col-sm-6 mb-sm-30">
@@ -957,7 +483,7 @@ const IndexPage = () => {
                                     </ul>
                                 </div>
                                 <div className="pricing-button pricing-padding">
-                                    <a className="btn btn-md btn-black" href="http://google.com/" target="_blank"><i className="fa fa-user left"></i>Sign Up</a>
+                                    <a className="btn btn-md btn-black" href="http://google.com/"><i className="fa fa-user left"></i>Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -980,7 +506,7 @@ const IndexPage = () => {
                                     </ul>
                                 </div>
                                 <div className="pricing-button pricing-padding">
-                                    <a className="btn btn-md btn-color" href="http://google.com/" target="_blank"><i className="fa fa-user left"></i>Sign Up</a>
+                                    <a className="btn btn-md btn-color" href="http://google.com/"><i className="fa fa-user left"></i>Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -1003,7 +529,7 @@ const IndexPage = () => {
                                     </ul>
                                 </div>
                                 <div className="pricing-button pricing-padding">
-                                    <a className="btn btn-md btn-black" href="http://google.com/" target="_blank"><i className="fa fa-user left"></i>Sign Up</a>
+                                    <a className="btn btn-md btn-black" href="http://google.com/"><i className="fa fa-user left"></i>Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -1011,7 +537,7 @@ const IndexPage = () => {
                 </div>
             </section>
 
-            <section id="video-action" className="section-padding bg-image overlay-dark dark-bg" data-stellar-background-ratio="0.5" data-background-img={Image02}>
+            <section id="video-action" className="section-padding bg-image overlay-dark dark-bg" data-stellar-background-ratio="0.5"  style={{backgroundImage: "url(" + Image02 + ")"}}>
                 <div className="container text-center">
                     <div className="page-icon">
                         <a className="video-popup white" href="https://www.youtube.com/watch?v=bMZ3ysoCgEU"><i className="icon icon-music-play-button"></i></a>
@@ -1032,62 +558,62 @@ const IndexPage = () => {
                     <div className="owl-carousel client-carousel">
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage01} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage01} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage02} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage02} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage03} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage03} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage04} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage04} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage05} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage05} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage06} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage06} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage08} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage08} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage01} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage01} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage02} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage02} alt="" /></button>
                             </div>
                         </div>
                         <div className="item">
                             <div className="client-logo">
-                                <a href="#">
-                                    <img src={LogoImage03} alt="" /></a>
+                                <button href="#intro">
+                                    <img src={LogoImage03} alt="" /></button>
                             </div>
                         </div>
                     </div>
@@ -1096,225 +622,7 @@ const IndexPage = () => {
 
             <hr />
 
-            <section id="elements" className="section-padding">
-                <div className="container text-center">
-                    <h2 className="page-title">Tabs <span className="text-light">&</span> Elements</h2>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <ul className="nav tabs-nav alt-icon-tab text-center" role="tablist">
-                            <li className="nav-item mb-30">
-                                <a className="nav-link active" href="#tab-video" data-toggle="tab">
-                                    <div className="alt-icon-top"><i className="icon icon-basic-video"></i></div>
-                                    <h6>Video</h6>
-                                </a>
-                            </li>
-                            <li className="nav-item mb-30">
-                                <a className="nav-link" href="#tab-image-slider" data-toggle="tab">
-                                    <div className="alt-icon-top"><i className="icon icon-basic-picture"></i></div>
-                                    <h6>Image Slider</h6>
-                                </a>
-                            </li>
-                            <li className="nav-item mb-30">
-                                <a className="nav-link" href="#tab-icon-box" data-toggle="tab">
-                                    <div className="alt-icon-top"><i className="icon icon-basic-spades"></i></div>
-                                    <h6>Icon Box</h6>
-                                </a>
-                            </li>
-                            <li className="nav-item mb-30">
-                                <a className="nav-link" href="#tab-content-box" data-toggle="tab">
-                                    <div className="alt-icon-top"><i className="icon icon-basic-webpage-txt"></i></div>
-                                    <h6>Content Box</h6>
-                                </a>
-                            </li>
-                            <li className="nav-item mb-30">
-                                <a className="nav-link" href="#tab-cover-box" data-toggle="tab">
-                                    <div className="alt-icon-top"><i className="icon icon-basic-webpage-multiple"></i></div>
-                                    <h6>Cover Box</h6>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="tabs-cont row">
-                        <div id="tab-video" role="tabpanel" className="col-12 tab-pane fade in active">
-                            <div className="row">
-                                <div className="col-md-10 offset-md-1">
-                                    <div className="media">
-                                        <iframe src="https://www.youtube.com/embed/bMZ3ysoCgEU?rel=0&amp;controls=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-image-slider" role="tabpanel" className="col-12 tab-pane fade">
-                            <div className="row">
-                                <div className="col-md-10 offset-md-1">
-                                    <div className="owl-carousel image-carousel nf-carousel-theme white">
-                                        <div className="item">
-                                            <img src={Image06} alt="" />
-                                        </div>
-                                        <div className="item">
-                                            <img src={Image14} alt="" />
-                                        </div>
-                                        <div className="item">
-                                            <img src={Image09} alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-icon-box" role="tabpanel" className="col-12 tab-pane fade">
-                            <div className="row">
-                                <div className="col-md-4 col-sm-6 mb-sm-30">
-                                    <div className="content-box alt-left">
-                                        <div className="alt-icon-left">
-                                            <i className="icon icon-basic-cup"></i>
-                                        </div>
-                                        <h5 className="features-title">Branding Design</h5>
-                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-sm-6 mb-sm-30">
-                                    <div className="content-box alt-left">
-                                        <div className="alt-icon-left">
-                                            <i className="icon icon-basic-life-buoy"></i>
-                                        </div>
-                                        <h5 className="features-title">Web Design</h5>
-                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-sm-6 mb-sm-30">
-                                    <div className="content-box alt-right">
-                                        <div className="alt-icon-right">
-                                            <i className="icon icon-basic-lightbulb"></i>
-                                        </div>
-                                        <h5 className="features-title">App Development</h5>
-                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-sm-6 mb-sm-30">
-                                    <div className="content-box alt-left">
-                                        <div className="alt-icon-left">
-                                            <i className="icon icon-basic-star"></i>
-                                        </div>
-                                        <h5 className="features-title">Graphic Design</h5>
-                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-sm-6 mb-sm-30">
-                                    <div className="content-box alt-left">
-                                        <div className="alt-icon-left">
-                                            <i className="icon icon-ecommerce-graph1"></i>
-                                        </div>
-                                        <h5 className="features-title">Landscape Photography</h5>
-                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-sm-6 mb-sm-30">
-                                    <div className="content-box alt-right">
-                                        <div className="alt-icon-right">
-                                            <i className="icon icon-music-play-button"></i>
-                                        </div>
-                                        <h5 className="features-title">Photo Editing</h5>
-                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-content-box" role="tabpanel" className="col-12 tab-pane fade">
-                            <div className="container text-center">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-6 mb-30">
-                                        <div className="content-box content-box-with-bg">
-                                            <div className="icon-top icon-color"><i className="icon icon-basic-accelerator"></i></div>
-                                            <h5 className="features-title">Branding Design</h5>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 col-sm-6 mb-30">
-                                        <div className="content-box content-box-with-bg">
-                                            <div className="icon-top icon-color"><i className="icon icon-basic-cup"></i></div>
-                                            <h5 className="features-title">Web Design</h5>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 col-sm-6 mb-30">
-                                        <div className="content-box content-box-with-bg">
-                                            <div className="icon-top icon-color"><i className="icon icon-basic-anchor"></i></div>
-                                            <h5 className="features-title">App Development</h5>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 col-sm-6 mb-30">
-                                        <div className="content-box content-box-with-bg">
-                                            <div className="icon-top icon-black"><i className="icon icon-basic-globe"></i></div>
-                                            <h5 className="features-title">Graphic Design</h5>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 col-sm-6 mb-30">
-                                        <div className="content-box content-box-with-bg">
-                                            <div className="icon-top icon-black"><i className="icon icon-basic-gear"></i></div>
-                                            <h5 className="features-title">Photography</h5>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 col-sm-6 mb-30">
-                                        <div className="content-box content-box-with-bg">
-                                            <div className="icon-top icon-black"><i className="icon icon-basic-paperplane"></i></div>
-                                            <h5 className="features-title">Photo Editing</h5>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum dolorem.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-cover-box" role="tabpanel" className="col-12 tab-pane fade">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-md-4">
-                                        <div className="cover-box mb-30">
-                                            <figure className="cover-box-img">
-                                                <img src={Thumb09} alt="cover-img" />
-                                            </figure>
-                                            <div className="cover-box-content">
-                                                <h5>Responsive Design</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut dignissimos ea est, impedit incidunt, laboriosam maxime</p>
-                                                <a className="link">Read More <i className="fa fa-angle-right right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="cover-box mb-30">
-                                            <figure className="cover-box-img">
-                                                <img src={Thumb06} alt="cover-img" />
-                                            </figure>
-                                            <div className="cover-box-content">
-                                                <h5>App Development</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut dignissimos ea est, impedit incidunt, laboriosam maxime</p>
-                                                <a className="link">Read More <i className="fa fa-angle-right right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="cover-box mb-30">
-                                            <figure className="cover-box-img">
-                                                <img src={Thumb05} alt="cover-img" />
-                                            </figure>
-                                            <div className="cover-box-content">
-                                                <h5>Photography</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut dignissimos ea est, impedit incidunt, laboriosam maxime</p>
-                                                <a className="link">Read More <i className="fa fa-angle-right right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <section id="contact-us" className="section-padding dark-bg bg-image overlay-dark60" data-background-img={Image02} data-stellar-background-ratio="0.5">
+            <section id="contact-us" className="section-padding dark-bg bg-image overlay-dark60" style={{backgroundImage: "url(" + Image02 + ")"}} data-stellar-background-ratio="0.5">
                 <div className="container">
                     <div className="row text-center">
                         <div className="col-12">
@@ -1323,9 +631,9 @@ const IndexPage = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-8 offset-md-2">
+                        <div className="col-md-12">
 
-                            <form id="contact" className="row contact-form" role="form">
+                            <form id="contact" className="row contact-form">
                                 <div className="col-md-12 text-center">
                                     <h5 className="successContent">
                                         <i className="fa fa-check left" style={{color: "#5cb45d"}}></i>Your message has been sent successfully.
@@ -1359,37 +667,6 @@ const IndexPage = () => {
                     </div>
                 </div>
             </section>
-            <section className="map" id="map"></section>
-            <section id="contct-info" className="section-padding">
-                <div className="container text-center">
-                    <div className="row">
-                        <div className="col-md-4 mb-sm-30 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
-                            <div className="alt-icon-sm-top"><i className="icon icon-basic-geolocalize-05"></i></div>
-                            <h5 className="features-title">Address</h5>
-                            <p>
-                                502, DieSachbearbeiter, Schönhauser Allee,<br />
-                                167c10435 Berlin,Germany.
-                            </p>
-                        </div>
-                        <div className="col-md-4 mb-sm-30 wow fadeIn" data-wow-delay="0.4s" data-wow-duration="2s">
-                            <div className="alt-icon-sm-top"><i className="icon icon-basic-alarm"></i></div>
-                            <h5 className="features-title">office Hours</h5>
-                            <p>
-                                Mon - Fri : 8am to 6pm<br />
-                                Sat : 10am to 2pm
-                            </p>
-                        </div>
-                        <div className="col-md-4 mb-sm-30 wow fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
-                            <div className="alt-icon-sm-top"><i className="icon icon-basic-headset"></i></div>
-                            <h5 className="features-title">Contact</h5>
-                            <p className="contact-link">
-                                <a href="mailto:yourname@domain.com"><span className="text-bold">Email :</span> yourname@domain.com</a><br />
-                                <a><span className="text-bold">Call :</span> +40 (0) 012 345 6789</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <footer id="footer" className="footer section-padding gray-bg">
                 <div className="container text-center">
@@ -1401,21 +678,21 @@ const IndexPage = () => {
                     </div>
 
                     <p className="copyright mb-25">
-                        &copy; 2015 <a><b>Mazel Template</b></a>. All Rights Reserved.<br />
-                        Template by <a href="http://nileforest.com/" target="_blank"><b>nileforest</b></a>
+                        &copy; 2015 <button><b>Mazel Template</b></button>. All Rights Reserved.<br />
+                        Template by <a href="http://nileforest.com/"><b>nileforest</b></a>
                     </p>
                     <ul className="social">
                         <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/"><i className="fa fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a>
+                            <a href="https://www.twitter.com/"><i className="fa fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/" target="_blank"><i className="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/"><i className="fa fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="https://plus.google.com/" target="_blank"><i className="fa fa-google-plus"></i></a>
+                            <a href="https://plus.google.com/"><i className="fa fa-google-plus"></i></a>
                         </li>
                     </ul>
 
