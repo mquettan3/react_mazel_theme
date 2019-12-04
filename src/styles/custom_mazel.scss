@@ -1,0 +1,11 @@
+.intro-fullscreen, .intro-full-height {
+    height: 100vh;
+
+    @media(min-width: 481px) {
+        min-height: 500px;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
