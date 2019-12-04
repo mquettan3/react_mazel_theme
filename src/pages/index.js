@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from "react"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faLinkedin, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
-// import $ from 'jquery'
+import $ from 'jquery'
 // import Scrollspy from 'react-scrollspy'
 import smoothscroll from 'smoothscroll-polyfill'
 import WOW from 'wowjs'
@@ -52,6 +52,9 @@ import Signature from "../images/signature.png";
 // import Thumb08 from "../images/portfolio/thumb/08.jpg";
 // import Thumb09 from "../images/portfolio/thumb/09.jpg";
 
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
+
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
 import "../styles/main.scss";
@@ -68,7 +71,6 @@ const IndexPage = () => {
 
   const [isPrepareHeader, setPrepareHeader] = useState(false);
   const [isFixHeader, setFixHeader] = useState(false);
-
 
   const handleScroll = (e) => {
     if(e.currentTarget.scrollY > 100) {
@@ -96,6 +98,7 @@ const IndexPage = () => {
 
   return (
   <>
+    <SEO title="Home" />
     {/* <section id="preloader">
         <div className="site-spinner"></div>
     </section> */}
@@ -272,7 +275,47 @@ const IndexPage = () => {
 
             <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image06 + ")"}}>
                 <div className="container">
-                    <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
+                <CarouselProvider
+                    naturalSlideWidth={100}
+                    naturalSlideHeight={15}
+                    totalSlides={3}
+                >
+                    <Slider>
+                        <Slide index={0}>
+                            <div className="item">
+                                <div className="testimonial text-center max-width-700">
+                                    <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                    <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
+                                    <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
+                                </div>
+                            </div>
+                        </Slide>
+                        <Slide index={1}>
+                            <div className="item">
+                                <div className="testimonial text-center max-width-700">
+                                    <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                    <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
+                                    <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
+                                </div>
+                            </div>
+                        </Slide>
+                        <Slide index={2}>
+                            <div className="item">
+                                <div className="testimonial text-center max-width-700">
+                                    <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                    <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
+                                    <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
+                                </div>
+                            </div>
+                        </Slide>
+                    </Slider>
+                    
+                    <DotGroup />
+                    
+                    <ButtonBack />
+                    <ButtonNext />
+                </CarouselProvider>
+                    {/* <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
                                 <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
@@ -294,7 +337,7 @@ const IndexPage = () => {
                                 <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

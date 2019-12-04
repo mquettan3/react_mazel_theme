@@ -68,6 +68,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      
+      script={
+        [
+          { src: "https://code.jquery.com/jquery-3.2.1.slim.min.js" },
+        ]
+      }
     />
   )
 }
