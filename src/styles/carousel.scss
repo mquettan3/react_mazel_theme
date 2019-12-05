@@ -9,3 +9,17 @@
         height: 90px;
     }
 }
+
+.content-carousel {
+    .owl-next {
+        i {
+            transform: translate(0, 0);
+        }
+    }
+
+    .owl-prev {
+        i {
+            transform: translate(0, 0);
+        }
+    }
+}

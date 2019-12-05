@@ -7,6 +7,11 @@ import SEO from "../components/seo"
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faLinkedin, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
+// import {  } from '@fortawesome/free-regular-svg-icons'
+import { Icon } from 'react-icons-kit';
+import { angleLeft, angleRight, bars, user, check, exclamationCircle, facebookF, linkedin, googlePlus, quoteRight, angleDown, externalLink, twitter } from 'react-icons-kit/fa';
+import { basic_anchor, basic_alarm, basic_globe, basic_headset, basic_book_pencil, basic_picture_multiple, basic_gear, ecommerce_graph3, basic_anticlockwise, basic_display, basic_eye, basic_cards_diamonds, basic_sheet, basic_cup, basic_heart, basic_case, basic_lightbulb } from 'react-icons-kit/linea';
+
 import $ from 'jquery'
 // import Scrollspy from 'react-scrollspy'
 import smoothscroll from 'smoothscroll-polyfill'
@@ -39,6 +44,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
 import "../styles/main.scss";
 import "../styles/owl.carousel.min.css";
+import { basic_webpage_multiple } from "react-icons-kit/linea";
+import { music_play_button } from "react-icons-kit/linea";
 
 global.jQuery = require('jquery');
 require('bootstrap');
@@ -59,7 +66,7 @@ const IndexPage = () => {
         slideSpeed: 350,
         pagination: true,  // Show pagination buttons
         navigation: false,  // Hide next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
         //  responsive: true
     });
 
@@ -72,7 +79,7 @@ const IndexPage = () => {
         slideSpeed: 500,
         pagination: false,  // Hide pagination buttons
         navigation: true,   // Show next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
         responsive: true
     });
 
@@ -87,7 +94,7 @@ const IndexPage = () => {
         itemsMobile: [480, 2],
         pagination: false,  // hide pagination buttons
         navigation: false,  // hide next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+        navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
     });
 
   }, []);
@@ -138,14 +145,14 @@ const IndexPage = () => {
                     </div>
 
                     <div className="nav-menu-icon">
-                        <div><i className="fa fa-bars"></i></div>
+                        <div><Icon icon={bars}></Icon></div>
                     </div>
 
                     <div className="nav-menu singlepage-nav">
                         <ul className="nav-menu-inner">
                             <li><a href="#intro" onClick={handleNavMenuItemClick}>Home</a></li>
                             <li>
-                                <a href="#intro" className="menu-has-sub" onClick={handleNavMenuItemClick}>Demos <i className="fa fa-angle-down"></i></a>
+                                <a href="#intro" className="menu-has-sub" onClick={handleNavMenuItemClick}>Demos <Icon icon={angleDown}></Icon></a>
                                 <ul className="sub-dropdown dropdown">
                                     <li><a className="nav-external" href="index.html">Home - Main</a></li>
                                     <li><a className="nav-external" href="index2-slider_vertical.html">Home - Vertical Slider</a></li>
@@ -159,7 +166,7 @@ const IndexPage = () => {
                                     <li><a className="nav-external" href="index10-bg_slideshow.html">Home - Bg Slideshow</a></li>
                                     <li><a className="nav-external" href="index11-coming_soon.html">Home - Coming Soon Page</a></li>
                                     <li>
-                                        <div className="menu-has-sub nav-external">Sub Dropdown<i className="fa fa-angle-right"></i></div>
+                                        <div className="menu-has-sub nav-external">Sub Dropdown<Icon icon={angleRight}></Icon></div>
                                         <ul className="sub-dropdown">
                                             <li><a className="nav-external" href="#intro">Sub Menu 1</a></li>
                                             <li><a className="nav-external" href="#intro">Sub Menu 2</a></li>
@@ -223,17 +230,17 @@ const IndexPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 col-sm-6 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
-                            <div className="icon-top icon-black"><i className="icon icon-basic-anchor"></i></div>
+                            <div className="icon-top icon-black"><Icon size={32} icon={basic_anchor}></Icon></div>
                             <h5 className="features-title">We’re Creative</h5>
                             <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.</p>
                         </div>
                         <div className="col-md-4 col-sm-6 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.4s" data-wow-duration="2s">
-                            <div className="icon-top icon-black"><i className="icon icon-basic-alarm"></i></div>
+                            <div className="icon-top icon-black"><Icon size={32} icon={basic_alarm}></Icon></div>
                             <h5 className="features-title">TWe have magic</h5>
                             <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.</p>
                         </div>
                         <div className="col-md-4 col-sm-6 content-box mb-sm-30 wow fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
-                            <div className="icon-top icon-black"><i className="icon icon-basic-globe"></i></div>
+                            <div className="icon-top icon-black"><Icon size={32} icon={basic_globe}></Icon></div>
                             <h5 className="features-title">Why we do it</h5>
                             <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo.</p>
                         </div>
@@ -258,37 +265,37 @@ const IndexPage = () => {
                     <div className="row">
                         <div className="process-box col-lg-2 col-md-4 col-sm-6 col-12 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
                             <div className="tipped" data-title="Step1 - Skype Interview" data-tipper-options='{"direction":"top"}'>
-                                <div className="process-icon alt-icon-top"><i className="icon icon-basic-headset"></i></div>
+                                <div className="process-icon alt-icon-top"><Icon size={45} icon={basic_headset}></Icon></div>
                                 <h6>Interview</h6>
                             </div>
                         </div>
                         <div className="process-box col-lg-2 col-md-4 col-sm-6 col-12 wow fadeIn" data-wow-delay="0.4s" data-wow-duration="2s">
                             <div className="tipped" data-title="Step2 - Project Plan" data-tipper-options='{"direction":"top"}'>
-                                <div className="process-icon alt-icon-top"><i className="icon icon-basic-book-pencil"></i></div>
+                                <div className="process-icon alt-icon-top"><Icon size={45} icon={basic_book_pencil}></Icon></div>
                                 <h6>Plan</h6>
                             </div>
                         </div>
                         <div className="process-box col-lg-2 col-md-4 col-sm-6 col-12 wow fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
                             <div className="tipped" data-title="Step3 - Design" data-tipper-options='{"direction":"top"}'>
-                                <div className="process-icon alt-icon-top"><i className="icon icon-basic-picture-multiple"></i></div>
+                                <div className="process-icon alt-icon-top"><Icon size={45} icon={basic_picture_multiple}></Icon></div>
                                 <h6>Design</h6>
                             </div>
                         </div>
                         <div className="process-box col-lg-2 col-md-4 col-sm-6 col-12 wow fadeIn" data-wow-delay="0.8s" data-wow-duration="2s">
                             <div className="tipped" data-title="Step4 - Development" data-tipper-options='{"direction":"top"}'>
-                                <div className="process-icon alt-icon-top"><i className="icon icon-basic-gear"></i></div>
+                                <div className="process-icon alt-icon-top"><Icon size={45} icon={basic_gear}></Icon></div>
                                 <h6>Development</h6>
                             </div>
                         </div>
                         <div className="process-box col-lg-2 col-md-4 col-sm-6 col-12 wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
                             <div className="tipped" data-title="Step5 - Testing" data-tipper-options='{"direction":"top"}'>
-                                <div className="process-icon alt-icon-top"><i className="icon icon-ecommerce-graph3"></i></div>
+                                <div className="process-icon alt-icon-top"><Icon size={45} icon={ecommerce_graph3}></Icon></div>
                                 <h6>Testing</h6>
                             </div>
                         </div>
                         <div className="process-box col-lg-2 col-md-4 col-sm-6 col-12 wow fadeIn" data-wow-delay="1.2s" data-wow-duration="2s">
                             <div className="tipped" data-title="Step6 - Delivery" data-tipper-options='{"direction":"top"}'>
-                                <div className="process-icon alt-icon-top"><i className="icon icon-basic-anticlockwise"></i></div>
+                                <div className="process-icon alt-icon-top"><Icon size={45} icon={basic_anticlockwise}></Icon></div>
                                 <h6>Delivery</h6>
                             </div>
                         </div>
@@ -301,21 +308,21 @@ const IndexPage = () => {
                     <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <div className="page-icon-sm"><Icon size={30} icon={quoteRight}></Icon></div>
                                 <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
                                 <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
                             </div>
                         </div>
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <div className="page-icon-sm"><Icon size={30} icon={quoteRight}></Icon></div>
                                 <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
                                 <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
                             </div>
                         </div>
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <div className="page-icon-sm"><Icon size={30} icon={quoteRight}></Icon></div>
                                 <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
                                 <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
                             </div>
@@ -344,7 +351,7 @@ const IndexPage = () => {
                                         <li>Branding Design</li>
                                         <li>Web Design</li>
                                     </ul>
-                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
+                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +366,7 @@ const IndexPage = () => {
                                         <li>Fully Responsive</li>
                                         <li>Web Design</li>
                                     </ul>
-                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
+                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
                                 </div>
                                 <div className="col-md-6 offset-md-1">
                                     <img src={Mockup01} alt="" />
@@ -379,7 +386,7 @@ const IndexPage = () => {
                                     <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
                                     <p>porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet</p>
                                     <div className="spacer-15"></div>
-                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <i className="fa fa-external-link right"></i></a>
+                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
                                 </div>
                             </div>
                         </div>
@@ -408,22 +415,22 @@ const IndexPage = () => {
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12 pt-30 pt-sm-0">
                             <div className="content-box right wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
-                                <div className="icon-right"><i className="icon icon-basic-display"></i></div>
+                                <div className="icon-right"><Icon size={32} icon={basic_display}></Icon></div>
                                 <h5 className="features-title">Bootstrap 4</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
                             <div className="content-box right wow fadeIn" data-wow-delay="0.2s" data-wow-duration="4s">
-                                <div className="icon-right"><i className="icon icon-music-play-button"></i></div>
+                                <div className="icon-right"><Icon size={32} icon={music_play_button}></Icon></div>
                                 <h5 className="features-title">html5 & Youtube video</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
                             <div className="content-box right wow fadeIn" data-wow-delay="0.2s" data-wow-duration="6s">
-                                <div className="icon-right"><i className="icon icon-basic-eye"></i></div>
+                                <div className="icon-right"><Icon size={32} icon={basic_eye}></Icon></div>
                                 <h5 className="features-title">Clean code & design</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
                             <div className="content-box right wow fadeIn" data-wow-delay="0.2s" data-wow-duration="8s">
-                                <div className="icon-right"><i className="icon icon-basic-webpage-multiple"></i></div>
+                                <div className="icon-right"><Icon size={32} icon={basic_webpage_multiple}></Icon></div>
                                 <h5 className="features-title">Unlimited layouts</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
@@ -433,22 +440,22 @@ const IndexPage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12 pt-30 pt-sm-0">
                             <div className="content-box left wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
-                                <div className="icon-left"><i className="icon icon-basic-gear"></i></div>
+                                <div className="icon-left"><Icon size={32} icon={basic_gear}></Icon></div>
                                 <h5 className="features-title">Flexible & Customizable</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
                             <div className="content-box left wow fadeIn" data-wow-delay="0.4s" data-wow-duration="2s">
-                                <div className="icon-left"><i className="icon icon-basic-cards-diamonds"></i></div>
+                                <div className="icon-left"><Icon size={32} icon={basic_cards_diamonds}></Icon></div>
                                 <h5 className="features-title">Multi Concept & Mutli prapose Theme</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
-                            <div className="content-box left wow fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
-                                <div className="icon-left"><i className="icon icon-basic-sheet"></i></div>
+                            <div className="content-box left wow size={32} fadeIn" data-wow-delay="0.6s" data-wow-duration="2s">
+                                <div className="icon-left"><Icon size={32} icon={basic_sheet}></Icon></div>
                                 <h5 className="features-title">Well Documented</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
-                            <div className="content-box left wow fadeIn" data-wow-delay="0.8s" data-wow-duration="2s">
-                                <div className="icon-left"><i className="icon icon-basic-headset"></i></div>
+                            <div className="content-box left wow size={32} fadeIn" data-wow-delay="0.8s" data-wow-duration="2s">
+                                <div className="icon-left"><Icon size={32} icon={basic_headset}></Icon></div>
                                 <h5 className="features-title">Friendly Support</h5>
                                 <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae vel illum.</p>
                             </div>
@@ -461,22 +468,22 @@ const IndexPage = () => {
                 <div className="container text-center">
                     <div className="row">
                         <div className="col-md-3 col-sm-6 mb-sm-30">
-                            <div className="alt-icon-top counter-icon"><i className="icon icon-basic-cup"></i></div>
+                            <div className="alt-icon-top counter-icon"><Icon size={40} icon={basic_cup}></Icon></div>
                             <h1 className="counter-title counter-num">103</h1>
                             <h5 className="counter-sub-title">Awwards</h5>
                         </div>
                         <div className="col-md-3 col-sm-6 mb-sm-30">
-                            <div className="alt-icon-top counter-icon"><i className="icon icon-basic-heart"></i></div>
+                            <div className="alt-icon-top counter-icon"><Icon size={40} icon={basic_heart}></Icon></div>
                             <h1 className="counter-title counter-num">256</h1>
                             <h5 className="counter-sub-title">client</h5>
                         </div>
                         <div className="col-md-3 col-sm-6 mb-sm-30">
-                            <div className="alt-icon-top counter-icon"><i className="icon icon-basic-case"></i></div>
+                            <div className="alt-icon-top counter-icon"><Icon size={40} icon={basic_case}></Icon></div>
                             <h1 className="counter-title counter-num">148</h1>
                             <h5 className="counter-sub-title">Project</h5>
                         </div>
                         <div className="col-md-3 col-sm-6 mb-sm-30">
-                            <div className="alt-icon-top counter-icon"><i className="icon icon-basic-lightbulb"></i></div>
+                            <div className="alt-icon-top counter-icon"><Icon size={40} icon={basic_lightbulb}></Icon></div>
                             <h1 className="counter-title counter-num">23</h1>
                             <h5 className="counter-sub-title">Team</h5>
                         </div>
@@ -509,7 +516,7 @@ const IndexPage = () => {
                                     </ul>
                                 </div>
                                 <div className="pricing-button pricing-padding">
-                                    <a className="btn btn-md btn-black" href="http://google.com/"><i className="fa fa-user left"></i>Sign Up</a>
+                                    <a className="btn btn-md btn-black" href="http://google.com/"><Icon className="left" icon={user}></Icon>Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -532,7 +539,7 @@ const IndexPage = () => {
                                     </ul>
                                 </div>
                                 <div className="pricing-button pricing-padding">
-                                    <a className="btn btn-md btn-color" href="http://google.com/"><i className="fa fa-user left"></i>Sign Up</a>
+                                    <a className="btn btn-md btn-color" href="http://google.com/"><Icon className="left" icon={user}></Icon>Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -555,7 +562,7 @@ const IndexPage = () => {
                                     </ul>
                                 </div>
                                 <div className="pricing-button pricing-padding">
-                                    <a className="btn btn-md btn-black" href="http://google.com/"><i className="fa fa-user left"></i>Sign Up</a>
+                                    <a className="btn btn-md btn-black" href="http://google.com/"><Icon icon={user} className="left"></Icon>Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -566,7 +573,7 @@ const IndexPage = () => {
             <section id="video-action" className="section-padding bg-image overlay-dark dark-bg" data-stellar-background-ratio="0.5"  style={{backgroundImage: "url(" + Image02 + ")"}}>
                 <div className="container text-center">
                     <div className="page-icon">
-                        <a className="video-popup white" href="https://www.youtube.com/watch?v=bMZ3ysoCgEU"><i className="icon icon-music-play-button"></i></a>
+                        <a className="video-popup white" href="https://www.youtube.com/watch?v=bMZ3ysoCgEU"><Icon size={40} icon={music_play_button}></Icon></a>
                     </div>
                     <p className="max-width-700 lead">
                         We’re developing a number of special projects if interested,<br />
@@ -662,10 +669,10 @@ const IndexPage = () => {
                             <form id="contact" className="row contact-form">
                                 <div className="col-md-12 text-center">
                                     <h5 className="successContent">
-                                        <i className="fa fa-check left" style={{color: "#5cb45d"}}></i>Your message has been sent successfully.
+                                        <Icon className="left" icon={check} style={{color: "#5cb45d"}}></Icon>Your message has been sent successfully.
                                     </h5>
                                     <h5 className="errorContent" style={{color: "#e1534f"}}>
-                                        <i className="fa fa-exclamation-circle left"></i>There was a problem validating the form please check!
+                                        <Icon className="left" icon={exclamationCircle}></Icon>There was a problem validating the form please check!
                                     </h5>
                                 </div>
                                 <div className="col-md-6">
@@ -709,16 +716,16 @@ const IndexPage = () => {
                     </p>
                     <ul className="social">
                         <li>
-                            <a href="https://www.facebook.com/"><i className="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/"><Icon icon={facebookF}></Icon></a>
                         </li>
                         <li>
-                            <a href="https://www.twitter.com/"><i className="fa fa-twitter"></i></a>
+                            <a href="https://www.twitter.com/"><Icon icon={twitter}></Icon></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/"><i className="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/"><Icon icon={linkedin}></Icon></a>
                         </li>
                         <li>
-                            <a href="https://plus.google.com/"><i className="fa fa-google-plus"></i></a>
+                            <a href="https://plus.google.com/"><Icon icon={googlePlus}></Icon></a>
                         </li>
                     </ul>
 
