@@ -97,10 +97,24 @@ const IndexPage = () => {
         navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
     });
 
+    // ----------------------------------------------------------------
+    // Navigation Menu panel
+    // ----------------------------------------------------------------
+
+    // Mobile menu max height
+    if($(window).width() <= 1024) {
+        setMobile(true);
+        $(".nav-menu").css("max-height", $(window).height() - 65 + "px")
+    } else {
+        setMobile(false);
+    }
+
   }, []);
 
   const [isPrepareHeader, setPrepareHeader] = useState(false);
   const [isFixHeader, setFixHeader] = useState(false);
+  const [isMobile, setMobile] = useState(false);
+  const [isNavMenuActive, setNavMenuActive] = useState(false);
 
   const handleScroll = (e) => {
     if(e.currentTarget.scrollY > 100) {
@@ -116,15 +130,34 @@ const IndexPage = () => {
     }
   }
 
+  const handleResize = (e) => {
+    // Mobile menu max height
+    if($(window).width() <= 1024) {
+        setMobile(true);
+        $(".nav-menu").css("max-height", $(window).height() - 65 + "px")
+    } else {
+        setMobile(false);
+    }
+  }
+
   const handleNavMenuItemClick = (e) => {
     if(e.currentTarget.hash) {
       e.preventDefault();
       let hash = e.currentTarget.hash
-      window.scroll({ top: document.querySelector(hash).offsetTop, left: 0, behavior: 'smooth' });
+      window.scroll({ top: document.querySelector(hash).offsetTop - 65, left: 0, behavior: 'smooth' });
+
+      if(isMobile) {
+        setNavMenuActive(!isNavMenuActive);
+      }
     }
   }
 
+  const handleNavMenuIconClick = (e) => {
+    setNavMenuActive(!isNavMenuActive);
+  }
+
   useEventListener("scroll", handleScroll);
+  useEventListener("resize", handleResize);
 
   return (
   <>
@@ -136,7 +169,7 @@ const IndexPage = () => {
     <div id="page-wraper">
         <div className="wrapper">
 
-            <div id="header" className={"header " + (isFixHeader ? "header-fixed " : "") + (isPrepareHeader ? "header-prepare " : "")}>
+            <div id="header" className={"header " + (isFixHeader ? "header-fixed " : "") + (isPrepareHeader ? "header-prepare " : "") + (isMobile ? "mobile-device " : "")}>
                 <div className="header-inner">
                     <div className="logo">
                         <a href="#intro">
@@ -144,46 +177,19 @@ const IndexPage = () => {
                         </a>
                     </div>
 
-                    <div className="nav-menu-icon">
-                        <div><Icon icon={bars}></Icon></div>
+                    <div className="nav-menu-icon" onClick={handleNavMenuIconClick}>
+                        <span><Icon size={30} icon={bars}></Icon></span>
                     </div>
 
-                    <div className="nav-menu singlepage-nav">
+                    <div className={"nav-menu singlepage-nav " + (isNavMenuActive ? "active " : "") }>
                         <ul className="nav-menu-inner">
                             <li><a href="#intro" onClick={handleNavMenuItemClick}>Home</a></li>
-                            <li>
-                                <a href="#intro" className="menu-has-sub" onClick={handleNavMenuItemClick}>Demos <Icon icon={angleDown}></Icon></a>
-                                <ul className="sub-dropdown dropdown">
-                                    <li><a className="nav-external" href="index.html">Home - Main</a></li>
-                                    <li><a className="nav-external" href="index2-slider_vertical.html">Home - Vertical Slider</a></li>
-                                    <li><a className="nav-external" href="index3-slider_kenburns.html">Home - Kenburns Slider</a></li>
-                                    <li><a className="nav-external" href="index4-static.html">Home - Static</a></li>
-                                    <li><a className="nav-external" href="index5-static_parallax.html">Home - Parallax</a></li>
-                                    <li><a className="nav-external" href="index6-text_rotator1.html">Home - Text Rotator 1</a></li>
-                                    <li><a className="nav-external" href="index7-text_rotator2.html">Home - Text Rotator 2</a></li>
-                                    <li><a className="nav-external" href="index8-video_youtube.html">Home - Video Bg</a></li>
-                                    <li><a className="nav-external" href="index9-text_slider.html">Home - Text Slider</a></li>
-                                    <li><a className="nav-external" href="index10-bg_slideshow.html">Home - Bg Slideshow</a></li>
-                                    <li><a className="nav-external" href="index11-coming_soon.html">Home - Coming Soon Page</a></li>
-                                    <li>
-                                        <div className="menu-has-sub nav-external">Sub Dropdown<Icon icon={angleRight}></Icon></div>
-                                        <ul className="sub-dropdown">
-                                            <li><a className="nav-external" href="#intro">Sub Menu 1</a></li>
-                                            <li><a className="nav-external" href="#intro">Sub Menu 2</a></li>
-                                            <li><a className="nav-external" href="#intro">Sub Menu 3</a></li>
-                                            <li><a className="nav-external" href="#intro">Sub Menu 4</a></li>
-                                            <li><a className="nav-external" href="#intro">Sub Menu 5</a></li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
                             <li><a href="#about" onClick={handleNavMenuItemClick}>About</a></li>
+                            <li><a href="#process" onClick={handleNavMenuItemClick}>Process</a></li>
                             <li><a href="#latest-work" onClick={handleNavMenuItemClick}>Work</a></li>
                             <li><a href="#service" onClick={handleNavMenuItemClick}>Service</a></li>
                             <li><a href="#pricing" onClick={handleNavMenuItemClick}>Pricing</a></li>
                             <li><a href="#client" onClick={handleNavMenuItemClick}>Client</a></li>
-                            <li><a href="#elements" onClick={handleNavMenuItemClick}>Elements</a></li>
                             <li><a href="#contact-us" onClick={handleNavMenuItemClick}>Contact</a></li>
                         </ul>
                     </div>
