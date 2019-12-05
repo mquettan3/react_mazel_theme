@@ -16,48 +16,29 @@ import Avatar01 from "../images/avatar01.jpg";
 import LogoLight from "../images/logo-light.png";
 import LogoDark from "../images/logo-dark.png";
 import Image02 from "../images/full/02.jpg";
-// import Image05 from "../images/full/05.jpg";
 import Image06 from "../images/full/06.jpg";
-// import Image09 from "../images/full/09.jpg";
 import Image14 from "../images/full/14.jpg";
-// import Image15 from "../images/full/15.jpg";
-// import Image20 from "../images/full/20.jpg";
 import Image34 from "../images/full/34.jpg";
 import Image33 from "../images/full/33.jpg";
-// import TeamImage01 from "../images/team/01.jpg";
-// import TeamImage02 from "../images/team/02.jpg";
-// import TeamImage03 from "../images/team/03.jpg";
-// import TeamImage04 from "../images/team/04.jpg";
-// import TeamImage06 from "../images/team/06.jpg";
-// import TeamImage07 from "../images/team/07.jpg";
 import LogoImage01 from "../images/logos/01.png";
 import LogoImage02 from "../images/logos/02.png";
 import LogoImage03 from "../images/logos/03.png";
 import LogoImage04 from "../images/logos/04.png";
 import LogoImage05 from "../images/logos/05.png";
 import LogoImage06 from "../images/logos/06.png";
-// import LogoImage07 from "../images/logos/07.png";
 import LogoImage08 from "../images/logos/08.png";
 import Mockup01 from "../images/mockup01.png";
 import Mockup02 from "../images/mockup02.png";
 import Mockup03 from "../images/mockup03.png";
 import Signature from "../images/signature.png";
-// import Thumb01 from "../images/portfolio/thumb/01.jpg";
-// import Thumb02 from "../images/portfolio/thumb/02.jpg";
-// import Thumb03 from "../images/portfolio/thumb/03.jpg";
-// import Thumb04 from "../images/portfolio/thumb/04.jpg";
-// import Thumb05 from "../images/portfolio/thumb/05.jpg";
-// import Thumb06 from "../images/portfolio/thumb/06.jpg";
-// import Thumb07 from "../images/portfolio/thumb/07.jpg";
-// import Thumb08 from "../images/portfolio/thumb/08.jpg";
-// import Thumb09 from "../images/portfolio/thumb/09.jpg";
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
-
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
 import "../styles/main.scss";
+import "../styles/owl.carousel.min.css";
 
 global.jQuery = require('jquery');
 require('bootstrap');
@@ -67,6 +48,21 @@ const IndexPage = () => {
     smoothscroll.polyfill();
     const wow = new WOW.WOW();
     wow.init()
+
+    // Testimonial Carousel
+    $('.testimonial-carousel').owlCarousel({
+        autoPlay: true,
+        center: true,
+        autoHeight: true,
+        stopOnHover: true,
+        singleItem: true,
+        slideSpeed: 350,
+        pagination: true,  // Show pagination buttons
+        navigation: false,  // Hide next and prev buttons
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        //  responsive: true
+    });
+
   }, []);
 
   const [isPrepareHeader, setPrepareHeader] = useState(false);
@@ -275,47 +271,10 @@ const IndexPage = () => {
 
             <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image06 + ")"}}>
                 <div className="container">
-                <CarouselProvider
-                    naturalSlideWidth={100}
-                    naturalSlideHeight={15}
-                    totalSlides={3}
-                >
-                    <Slider>
-                        <Slide index={0}>
-                            <div className="item">
-                                <div className="testimonial text-center max-width-700">
-                                    <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                    <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
-                                    <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
-                                </div>
-                            </div>
-                        </Slide>
-                        <Slide index={1}>
-                            <div className="item">
-                                <div className="testimonial text-center max-width-700">
-                                    <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                    <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
-                                    <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
-                                </div>
-                            </div>
-                        </Slide>
-                        <Slide index={2}>
-                            <div className="item">
-                                <div className="testimonial text-center max-width-700">
-                                    <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                    <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
-                                    <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
-                                </div>
-                            </div>
-                        </Slide>
-                    </Slider>
-                    
-                    <DotGroup />
-                    
-                    <ButtonBack />
-                    <ButtonNext />
-                </CarouselProvider>
-                    {/* <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
+                    {/* <OwlCarousel
+                        className="owl-carousel testimonial-carousel nf-carousel-theme white owl-height"
+                        {...options}
+                    >
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
                                 <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
@@ -337,7 +296,30 @@ const IndexPage = () => {
                                 <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
                             </div>
                         </div>
-                    </div> */}
+                    </OwlCarousel> */}
+                    <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
+                        <div className="item">
+                            <div className="testimonial text-center max-width-700">
+                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
+                                <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="testimonial text-center max-width-700">
+                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
+                                <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="testimonial text-center max-width-700">
+                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
+                                <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
+                                <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
