@@ -63,6 +63,33 @@ const IndexPage = () => {
         //  responsive: true
     });
 
+    // Content Carousel
+    $('.content-carousel').owlCarousel({
+        autoPlay: true,
+        autoHeight: true,
+        stopOnHover: true,
+        singleItem: true,
+        slideSpeed: 500,
+        pagination: false,  // Hide pagination buttons
+        navigation: true,   // Show next and prev buttons
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        responsive: true
+    });
+
+    // Client Carousel
+    $('.client-carousel').owlCarousel({
+        autoPlay: 2500,
+        stopOnHover: true,
+        items: 6,
+        itemsDesktop: [1170, 5],
+        itemsDesktopSmall: [1024, 4],
+        itemsTabletSmall: [768, 3],
+        itemsMobile: [480, 2],
+        pagination: false,  // hide pagination buttons
+        navigation: false,  // hide next and prev buttons
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+    });
+
   }, []);
 
   const [isPrepareHeader, setPrepareHeader] = useState(false);
@@ -271,32 +298,6 @@ const IndexPage = () => {
 
             <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image06 + ")"}}>
                 <div className="container">
-                    {/* <OwlCarousel
-                        className="owl-carousel testimonial-carousel nf-carousel-theme white owl-height"
-                        {...options}
-                    >
-                        <div className="item">
-                            <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                <p className="lead">I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising.</p>
-                                <h6 className="quote-author">Jeff Dunham <span className="text-regular">( Appel Studio )</span></h6>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                <p className="lead">you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist.</p>
-                                <h6 className="quote-author">Alexander Theroux <span className="text-regular">( USA )</span></h6>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="testimonial text-center max-width-700">
-                                <div className="page-icon-sm"><i className="fa fa-quote-right"></i></div>
-                                <p className="lead">We're not leaving here without Buster, man. Leave no crash-test dummy behind!</p>
-                                <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
-                            </div>
-                        </div>
-                    </OwlCarousel> */}
                     <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
@@ -334,7 +335,7 @@ const IndexPage = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6 mb-sm-30">
-                                    <img src={Mockup02} alt="" />
+                                    <img src={Mockup01} alt="" />
                                 </div>
                                 <div className="col-md-5 offset-md-1">
                                     <h4 className="content-title">Project name & Title</h4>
