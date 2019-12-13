@@ -25,8 +25,8 @@ export default function HTML(props) {
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
-        {props.postBodyComponents}
         <script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
+        {props.postBodyComponents}
       </body>
     </html>
   )
