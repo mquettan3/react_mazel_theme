@@ -12,9 +12,11 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script defer src="/plugins/owl-carousel/owl.carousel.min.js"></script>
+        {/* <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script defer src="/plugins/owl-carousel/owl.carousel.min.js"></script> */}
         <link rel="stylesheet" type="text/css" href={OwlStyles} />
+        <link as="script" rel="preload" href="/plugins/owl-carousel/owl.carousel.min.js" />
+        <link as="script" rel="preload" href="https://code.jquery.com/jquery-3.2.1.slim.min.js" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
