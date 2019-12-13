@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="/plugins/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/plugins/owl-carousel/owl.carousel.min.css" />
         {props.headComponents}
       </head>
@@ -25,8 +25,8 @@ export default function HTML(props) {
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
-        <script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
         {props.postBodyComponents}
+        <script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
       </body>
     </html>
   )
