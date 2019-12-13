@@ -159,6 +159,7 @@ const IndexPage = () => {
   useEventListener("scroll", handleScroll);
   useEventListener("resize", handleResize);
 
+
   return (
   <>
     <SEO title="Home" />
@@ -745,7 +746,14 @@ const IndexPage = () => {
 }
 
 // custom Hook
-function useEventListener(eventName, handler, element = window){
+function useEventListener(eventName, handler, element = null){
+    if (element === null) {
+        if (typeof window !== 'undefined') {
+            element = window;
+        } else {
+            return;
+        }
+    }
     // Create a ref that stores handler
     const savedHandler = useRef();
     
