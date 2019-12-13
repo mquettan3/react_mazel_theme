@@ -43,7 +43,7 @@ import Signature from "../images/signature.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
 import "../styles/main.scss";
-// import "../styles/owl.carousel.min.css";
+import "../../static/plugins/owl-carousel/owl.carousel.min.css";
 import { basic_webpage_multiple } from "react-icons-kit/linea";
 import { music_play_button } from "react-icons-kit/linea";
 

@@ -12,7 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/plugins/owl-carousel/owl.carousel.min.css" />
         {props.headComponents}
       </head>
@@ -27,6 +26,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
       </body>
     </html>
   )
