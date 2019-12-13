@@ -40,10 +40,14 @@ import Signature from "../images/signature.png";
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
 
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
 import "../styles/main.scss";
-import "../../static/plugins/owl-carousel/owl.carousel.min.css";
+// import "../../static/plugins/owl-carousel/owl.carousel.min.css";
 import { basic_webpage_multiple } from "react-icons-kit/linea";
 import { music_play_button } from "react-icons-kit/linea";
 
@@ -56,46 +60,46 @@ const IndexPage = () => {
     const wow = new WOW.WOW();
     wow.init()
 
-    // Testimonial Carousel
-    $('.testimonial-carousel').owlCarousel({
-        autoPlay: true,
-        center: true,
-        autoHeight: true,
-        stopOnHover: true,
-        singleItem: true,
-        slideSpeed: 350,
-        pagination: true,  // Show pagination buttons
-        navigation: false,  // Hide next and prev buttons
-        navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
-        //  responsive: true
-    });
+    // // Testimonial Carousel
+    // $('.testimonial-carousel').owlCarousel({
+    //     autoPlay: true,
+    //     center: true,
+    //     autoHeight: true,
+    //     stopOnHover: true,
+    //     singleItem: true,
+    //     slideSpeed: 350,
+    //     pagination: true,  // Show pagination buttons
+    //     navigation: false,  // Hide next and prev buttons
+    //     navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
+    //     //  responsive: true
+    // });
 
-    // Content Carousel
-    $('.content-carousel').owlCarousel({
-        autoPlay: true,
-        autoHeight: true,
-        stopOnHover: true,
-        singleItem: true,
-        slideSpeed: 500,
-        pagination: false,  // Hide pagination buttons
-        navigation: true,   // Show next and prev buttons
-        navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
-        responsive: true
-    });
+    // // Content Carousel
+    // $('.content-carousel').owlCarousel({
+    //     autoPlay: true,
+    //     autoHeight: true,
+    //     stopOnHover: true,
+    //     singleItem: true,
+    //     slideSpeed: 500,
+    //     pagination: false,  // Hide pagination buttons
+    //     navigation: true,   // Show next and prev buttons
+    //     navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
+    //     responsive: true
+    // });
 
-    // Client Carousel
-    $('.client-carousel').owlCarousel({
-        autoPlay: 2500,
-        stopOnHover: true,
-        items: 6,
-        itemsDesktop: [1170, 5],
-        itemsDesktopSmall: [1024, 4],
-        itemsTabletSmall: [768, 3],
-        itemsMobile: [480, 2],
-        pagination: false,  // hide pagination buttons
-        navigation: false,  // hide next and prev buttons
-        navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
-    });
+    // // Client Carousel
+    // $('.client-carousel').owlCarousel({
+    //     autoPlay: 2500,
+    //     stopOnHover: true,
+    //     items: 6,
+    //     itemsDesktop: [1170, 5],
+    //     itemsDesktopSmall: [1024, 4],
+    //     itemsTabletSmall: [768, 3],
+    //     itemsMobile: [480, 2],
+    //     pagination: false,  // hide pagination buttons
+    //     navigation: false,  // hide next and prev buttons
+    //     navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
+    // });
 
     // ----------------------------------------------------------------
     // Navigation Menu panel
@@ -312,7 +316,26 @@ const IndexPage = () => {
 
             <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image06 + ")"}}>
                 <div className="container">
-                    <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
+                    <OwlCarousel
+                        className="owl-theme"
+                        loop
+                        margin={10}
+                        nav
+                    >
+                        <div className="item"><h4>1</h4></div>
+                        <div className="item"><h4>2</h4></div>
+                        <div className="item"><h4>3</h4></div>
+                        <div className="item"><h4>4</h4></div>
+                        <div className="item"><h4>5</h4></div>
+                        <div className="item"><h4>6</h4></div>
+                        <div className="item"><h4>7</h4></div>
+                        <div className="item"><h4>8</h4></div>
+                        <div className="item"><h4>9</h4></div>
+                        <div className="item"><h4>10</h4></div>
+                        <div className="item"><h4>11</h4></div>
+                        <div className="item"><h4>12</h4></div>
+                    </OwlCarousel>
+                    {/* <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
                                 <div className="page-icon-sm"><Icon size={30} icon={quoteRight}></Icon></div>
@@ -334,7 +357,7 @@ const IndexPage = () => {
                                 <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 

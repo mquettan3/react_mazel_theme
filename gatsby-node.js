@@ -7,11 +7,7 @@
 // You can delete this file if you're not using it
 
 
-// Note:  Used for development ONLY - Remove for production!
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  }
-
-exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions, plugins  }) => {
   switch (stage) {
     case 'build-html':
       actions.setWebpackConfig({
@@ -29,10 +25,26 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
         }
       });
       break;
+    // Note:  Used for development ONLY - Remove for production!
     case 'develop':
       actions.setWebpackConfig({
         devtool: `cheap-module-source-map`,
       })
       break;
   }
+  
+  actions.setWebpackConfig({
+    plugins: 
+      [
+        plugins.define({
+          $: 'jQuery',
+        }),
+        plugins.define({
+          jQuery: 'jQuery',
+        }),
+        plugins.define({
+          'window.jQuery': 'jQuery',
+        })
+      ]
+  });
 };
