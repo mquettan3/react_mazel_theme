@@ -747,13 +747,6 @@ const IndexPage = () => {
 
 // custom Hook
 function useEventListener(eventName, handler, element = null){
-    if (element === null) {
-        if (typeof window !== 'undefined') {
-            element = window;
-        } else {
-            return;
-        }
-    }
     // Create a ref that stores handler
     const savedHandler = useRef();
     
@@ -767,6 +760,13 @@ function useEventListener(eventName, handler, element = null){
   
     useEffect(
       () => {
+        if (element === null) {
+            if (typeof window !== 'undefined') {
+                element = window;
+            } else {
+                return;
+            }
+        }
         // Make sure element supports addEventListener
         // On 
         const isSupported = element && element.addEventListener;

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import OwlStyles from "./styles/owl.carousel.min.css"
 
 export default function HTML(props) {
   return (
@@ -13,7 +14,7 @@ export default function HTML(props) {
         />
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script defer src="/plugins/owl-carousel/owl.carousel.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="/plugins/owl-carousel/owl.carousel.min.css" />
+        <link rel="stylesheet" type="text/css" href={OwlStyles} />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
