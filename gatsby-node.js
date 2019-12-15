@@ -20,6 +20,10 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions, plugins  }) =
             {
               test: /bootstrap/,
               use: [loaders.null()]
+            },
+            {
+              test: /owl.carousel/,
+              use: [loaders.null()]
             }
           ]
         }
