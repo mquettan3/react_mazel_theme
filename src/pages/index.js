@@ -138,7 +138,8 @@ const IndexPage = () => {
     // Content Carousel
     const contentCarouselOptions = {
         autoplay: true,
-        loop: true,
+        loop: false,
+        rewind: true,
         center: true,
         autoplayHoverPause: true,
         autoplayTimeout: 5000,
@@ -151,7 +152,8 @@ const IndexPage = () => {
     // Client Carousel
     const clientCarouselOptions = {
         autoplay: true,
-        loop: true,
+        loop: false,
+        rewind: true,
         center: false,
         autoplayHoverPause: true,
         autoplayTimeout: 3000,
