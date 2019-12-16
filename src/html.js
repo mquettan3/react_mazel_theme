@@ -26,7 +26,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
+        {/* <script src="/plugins/owl-carousel/owl.carousel.min.js"></script> */}
       </body>
     </html>
   )
