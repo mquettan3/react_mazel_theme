@@ -55,11 +55,6 @@ const OwlCarousel = Loadable(() => import('react-owl-carousel'));
 
 global.jQuery = require('jquery');
 require('bootstrap');
-try {
-    const OwlCarousel = require('react-owl-carousel');
-} catch (e) {
-    console.log(e);
-}
 
 const IndexPage = () => {
   useEffect(() => {
