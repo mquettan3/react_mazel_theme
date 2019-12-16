@@ -40,7 +40,6 @@ import Signature from "../images/signature.png";
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
@@ -50,6 +49,9 @@ import "../styles/main.scss";
 // import "../../static/plugins/owl-carousel/owl.carousel.min.css";
 import { basic_webpage_multiple } from "react-icons-kit/linea";
 import { music_play_button } from "react-icons-kit/linea";
+import Loadable from '@loadable/component'
+
+const OwlCarousel = Loadable(() => import('react-owl-carousel'));
 
 global.jQuery = require('jquery');
 require('bootstrap');
