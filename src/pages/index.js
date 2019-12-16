@@ -1,22 +1,17 @@
 import React, { useEffect, useRef, useState } from "react"
 // import { Link } from "gatsby"
 
+// Components
 // import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faLinkedin, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
-// import {  } from '@fortawesome/free-regular-svg-icons'
-import { Icon } from 'react-icons-kit';
-import { angleLeft, angleRight, bars, user, check, exclamationCircle, facebookF, linkedin, googlePlus, quoteRight, angleDown, externalLink, twitter } from 'react-icons-kit/fa';
-import { basic_anchor, basic_alarm, basic_globe, basic_headset, basic_book_pencil, basic_picture_multiple, basic_gear, ecommerce_graph3, basic_anticlockwise, basic_display, basic_eye, basic_cards_diamonds, basic_sheet, basic_cup, basic_heart, basic_case, basic_lightbulb } from 'react-icons-kit/linea';
-
+// Plugins
 import $ from 'jquery'
-// import Scrollspy from 'react-scrollspy'
 import smoothscroll from 'smoothscroll-polyfill'
 import WOW from 'wowjs'
 
+// Images
 import Avatar01 from "../images/avatar01.jpg";
 import LogoLight from "../images/logo-light.png";
 import LogoDark from "../images/logo-dark.png";
@@ -36,21 +31,23 @@ import Mockup01 from "../images/mockup01.png";
 import Mockup02 from "../images/mockup02.png";
 import Mockup03 from "../images/mockup03.png";
 import Signature from "../images/signature.png";
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
+// Styles
 import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/animate.css";
 import "../styles/main.scss";
-// import "../../static/plugins/owl-carousel/owl.carousel.min.css";
+
+// Icons
 import { basic_webpage_multiple } from "react-icons-kit/linea";
 import { music_play_button } from "react-icons-kit/linea";
-import Loadable from '@loadable/component'
+import { Icon } from 'react-icons-kit';
+import { angleLeft, angleRight, bars, user, check, exclamationCircle, facebookF, linkedin, googlePlus, quoteRight, angleDown, externalLink, twitter } from 'react-icons-kit/fa';
+import { basic_anchor, basic_alarm, basic_globe, basic_headset, basic_book_pencil, basic_picture_multiple, basic_gear, ecommerce_graph3, basic_anticlockwise, basic_display, basic_eye, basic_cards_diamonds, basic_sheet, basic_cup, basic_heart, basic_case, basic_lightbulb } from 'react-icons-kit/linea';
 
+// Loadable Components
+import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel'));
 
 global.jQuery = require('jquery');
@@ -61,47 +58,6 @@ const IndexPage = () => {
     smoothscroll.polyfill();
     const wow = new WOW.WOW();
     wow.init()
-
-    // // Testimonial Carousel
-    // $('.testimonial-carousel').owlCarousel({
-    //     autoPlay: true,
-    //     center: true,
-    //     autoHeight: true,
-    //     stopOnHover: true,
-    //     singleItem: true,
-    //     slideSpeed: 350,
-    //     pagination: true,  // Show pagination buttons
-    //     navigation: false,  // Hide next and prev buttons
-    //     navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
-    //     //  responsive: true
-    // });
-
-    // // Content Carousel
-    // $('.content-carousel').owlCarousel({
-    //     autoPlay: true,
-    //     autoHeight: true,
-    //     stopOnHover: true,
-    //     singleItem: true,
-    //     slideSpeed: 500,
-    //     pagination: false,  // Hide pagination buttons
-    //     navigation: true,   // Show next and prev buttons
-    //     navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
-    //     responsive: true
-    // });
-
-    // // Client Carousel
-    // $('.client-carousel').owlCarousel({
-    //     autoPlay: 2500,
-    //     stopOnHover: true,
-    //     items: 6,
-    //     itemsDesktop: [1170, 5],
-    //     itemsDesktopSmall: [1024, 4],
-    //     itemsTabletSmall: [768, 3],
-    //     itemsMobile: [480, 2],
-    //     pagination: false,  // hide pagination buttons
-    //     navigation: false,  // hide next and prev buttons
-    //     navigationText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"],
-    // });
 
     // ----------------------------------------------------------------
     // Navigation Menu panel
@@ -165,6 +121,45 @@ const IndexPage = () => {
   useEventListener("scroll", handleScroll);
   useEventListener("resize", handleResize);
 
+
+    // Testimonial Carousel
+    const testimonialCarouselOptions = {
+        autoplay: true,
+        loop: true,
+        center: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        dots: true,  // Show pagination buttons
+        nav: false,  // Hide next and prev buttons
+        navText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"]
+    };
+
+    // Content Carousel
+    const contentCarouselOptions = {
+        autoplay: true,
+        loop: true,
+        center: true,
+        autoplayHoverPause: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        dots: true,  // Hide pagination buttons
+        nav: true,   // Show next and prev buttons
+        navText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"]
+    };
+
+    // Client Carousel
+    const clientCarouselOptions = {
+        autoplay: true,
+        loop: true,
+        center: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 3000,
+        items: 6,
+        dots: false,  // Hide pagination buttons
+        nav: false,   // Show next and prev buttons
+        navText: ["<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M627 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z\"></path></svg></i>", "<i fill=\"currentColor\" style=\"display: inline-block;\"><svg fill=\"currentColor\" height=\"25\" width=\"10\" viewBox=\"0 0 640 1792\" style=\"display: inline-block; vertical-align: middle;\"><path d=\"M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z\"></path></svg></i>"]
+    };
 
   return (
   <>
@@ -318,28 +313,10 @@ const IndexPage = () => {
 
             <section id="testimonials" className="section-padding bg-image overlay-dark dark-bg text-center" data-stellar-background-ratio="0.5" style={{backgroundImage: "url(" + Image06 + ")"}}>
                 <div className="container">
-                    {typeof OwlCarousel !== 'undefined' && 
-                        <OwlCarousel
-                            className="owl-theme"
-                            loop
-                            margin={10}
-                            nav
-                        >
-                            <div className="item"><h4>1</h4></div>
-                            <div className="item"><h4>2</h4></div>
-                            <div className="item"><h4>3</h4></div>
-                            <div className="item"><h4>4</h4></div>
-                            <div className="item"><h4>5</h4></div>
-                            <div className="item"><h4>6</h4></div>
-                            <div className="item"><h4>7</h4></div>
-                            <div className="item"><h4>8</h4></div>
-                            <div className="item"><h4>9</h4></div>
-                            <div className="item"><h4>10</h4></div>
-                            <div className="item"><h4>11</h4></div>
-                            <div className="item"><h4>12</h4></div>
-                        </OwlCarousel>
-                    }
-                    {/* <div className="owl-carousel testimonial-carousel nf-carousel-theme white">
+                    <OwlCarousel
+                        className="owl-theme"
+                        {...testimonialCarouselOptions}
+                    >
                         <div className="item">
                             <div className="testimonial text-center max-width-700">
                                 <div className="page-icon-sm"><Icon size={30} icon={quoteRight}></Icon></div>
@@ -361,7 +338,7 @@ const IndexPage = () => {
                                 <h6 className="quote-author">Adam Savage <span className="text-regular">( Artist )</span></h6>
                             </div>
                         </div>
-                    </div> */}
+                    </OwlCarousel>
                 </div>
             </section>
 
@@ -371,61 +348,64 @@ const IndexPage = () => {
                 <div className="container text-center">
                     <h2 className="page-title">Latest <span className="text-light">Work</span></h2>
                 </div>
-                <div className="owl-carousel content-carousel content-slider">
-                    <div className="item">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-6 mb-sm-30">
-                                    <img src={Mockup01} alt="" />
-                                </div>
-                                <div className="col-md-5 offset-md-1">
-                                    <h4 className="content-title">Project name & Title</h4>
-                                    <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
-                                    <ul className="list-inside">
-                                        <li>Branding Design</li>
-                                        <li>Web Design</li>
-                                    </ul>
-                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
+                    <OwlCarousel
+                        className="content-carousel content-slider"
+                        {...contentCarouselOptions}
+                    >
+                        <div className="item">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-6 mb-sm-30">
+                                        <img src={Mockup01} alt="" />
+                                    </div>
+                                    <div className="col-md-5 offset-md-1">
+                                        <h4 className="content-title">Project name & Title</h4>
+                                        <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
+                                        <ul className="list-inside">
+                                            <li>Branding Design</li>
+                                            <li>Web Design</li>
+                                        </ul>
+                                        <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="item">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-5 mb-sm-30">
-                                    <h4 className="content-title">Project name & Title</h4>
-                                    <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
-                                    <ul className="list-inside">
-                                        <li>Fully Responsive</li>
-                                        <li>Web Design</li>
-                                    </ul>
-                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
-                                </div>
-                                <div className="col-md-6 offset-md-1">
-                                    <img src={Mockup01} alt="" />
-                                </div>
+                        <div className="item">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-5 mb-sm-30">
+                                        <h4 className="content-title">Project name & Title</h4>
+                                        <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
+                                        <ul className="list-inside">
+                                            <li>Fully Responsive</li>
+                                            <li>Web Design</li>
+                                        </ul>
+                                        <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
+                                    </div>
+                                    <div className="col-md-6 offset-md-1">
+                                        <img src={Mockup01} alt="" />
+                                    </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-6 mb-sm-30">
-                                    <img src={Mockup01} alt="" />
-                                </div>
-                                <div className="col-md-5 offset-md-1">
-                                    <h4 className="content-title">Fully Responsive</h4>
-                                    <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
-                                    <p>porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet</p>
-                                    <div className="spacer-15"></div>
-                                    <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div className="item">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-6 mb-sm-30">
+                                        <img src={Mockup01} alt="" />
+                                    </div>
+                                    <div className="col-md-5 offset-md-1">
+                                        <h4 className="content-title">Fully Responsive</h4>
+                                        <p>Cras dapibus Vivamus elementum semper nisi Aenean vulputate eleifend tellus Aenean leo ligula, porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet.</p>
+                                        <p>porttitor eu consequat vitae Phasellus viverra nulla ut metus varius laoreet</p>
+                                        <div className="spacer-15"></div>
+                                        <a href="http://google.com/" className="btn btn-md btn-black">Visit Site <Icon className="right" icon={externalLink}></Icon></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </OwlCarousel>
             </section>
 
             <section id="action-box2" className="action-box action-black">
@@ -619,10 +599,13 @@ const IndexPage = () => {
 
             <section id="client" className="section-padding">
                 <div className="container text-center">
-                    <h2 className="page-title">Happy <span className="text-light">Client</span></h2>
+                    <h2 className="page-title">Happy <span className="text-light">Clients</span></h2>
                 </div>
                 <div className="container">
-                    <div className="owl-carousel client-carousel">
+                    <OwlCarousel
+                        className="owl-theme client-carousel"
+                        {...clientCarouselOptions}
+                    >
                         <div className="item">
                             <div className="client-logo">
                                 <button href="#intro">
@@ -683,7 +666,7 @@ const IndexPage = () => {
                                     <img src={LogoImage03} alt="" /></button>
                             </div>
                         </div>
-                    </div>
+                    </OwlCarousel>
                 </div>
             </section>
 
