@@ -56,8 +56,7 @@ const Bootstrap = Loadable(() => import('bootstrap'))
 const IndexPage = () => {
   useEffect(() => {
     smoothscroll.polyfill();
-    const wow = new WOW.WOW.WOW();
-    wow.init()
+    WOW.init()
 
     // ----------------------------------------------------------------
     // Navigation Menu panel
