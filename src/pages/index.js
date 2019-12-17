@@ -7,9 +7,8 @@ import React, { useEffect, useRef, useState } from "react"
 import SEO from "../components/seo"
 
 // Plugins
-import $ from 'jquery'
+// import $ from 'jquery'
 import smoothscroll from 'smoothscroll-polyfill'
-import WOW from 'wowjs'
 
 // Images
 import Avatar01 from "../images/avatar01.jpg";
@@ -46,12 +45,13 @@ import { Icon } from 'react-icons-kit';
 import { angleLeft, angleRight, bars, user, check, exclamationCircle, facebookF, linkedin, googlePlus, quoteRight, angleDown, externalLink, twitter } from 'react-icons-kit/fa';
 import { basic_anchor, basic_alarm, basic_globe, basic_headset, basic_book_pencil, basic_picture_multiple, basic_gear, ecommerce_graph3, basic_anticlockwise, basic_display, basic_eye, basic_cards_diamonds, basic_sheet, basic_cup, basic_heart, basic_case, basic_lightbulb } from 'react-icons-kit/linea';
 
-// Loadable Components
+// Loadable Components - Client only components
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel'));
-
-global.jQuery = require('jquery');
-require('bootstrap');
+const WOW = Loadable(() => import('wowjs'));
+const Bootstrap = Loadable(() => import('bootstrap'))
+// global.jQuery = require('jquery');
+// require('bootstrap');
 
 const IndexPage = () => {
   useEffect(() => {
@@ -64,15 +64,16 @@ const IndexPage = () => {
     // ----------------------------------------------------------------
 
     // Mobile menu max height
-    if($(window).width() <= 1024) {
+    if(window.width <= 1024) {
         setMobile(true);
-        $(".nav-menu").css("max-height", $(window).height() - 65 + "px")
+        setWindowMaxHeight(window.height - 65);
     } else {
         setMobile(false);
     }
 
   }, []);
 
+  const [windowMaxHeight, setWindowMaxHeight] = useState(false);
   const [isPrepareHeader, setPrepareHeader] = useState(false);
   const [isFixHeader, setFixHeader] = useState(false);
   const [isMobile, setMobile] = useState(false);
@@ -96,7 +97,7 @@ const IndexPage = () => {
     // Mobile menu max height
     if($(window).width() <= 1024) {
         setMobile(true);
-        $(".nav-menu").css("max-height", $(window).height() - 65 + "px")
+        setWindowMaxHeight(window.height - 65);
     } else {
         setMobile(false);
     }
@@ -185,7 +186,7 @@ const IndexPage = () => {
                         <span><Icon size={30} icon={bars}></Icon></span>
                     </div>
 
-                    <div className={"nav-menu singlepage-nav " + (isNavMenuActive ? "active " : "") }>
+                    <div className={"nav-menu singlepage-nav " + (isNavMenuActive ? "active " : "") } style={{maxHeight: windowMaxHeight + "px"}}>
                         <ul className="nav-menu-inner">
                             <li><a href="#intro" onClick={handleNavMenuItemClick}>Home</a></li>
                             <li><a href="#about" onClick={handleNavMenuItemClick}>About</a></li>

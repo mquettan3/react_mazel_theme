@@ -9,26 +9,6 @@
 
 exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions, plugins  }) => {
   switch (stage) {
-    case 'build-html':
-      actions.setWebpackConfig({
-        module: {
-          rules: [
-            {
-              test: /wowjs/,
-              use: [loaders.null()]
-            },
-            {
-              test: /bootstrap/,
-              use: [loaders.null()]
-            },
-            // {
-            //   test: /owl.carousel/,
-            //   use: [loaders.null()]
-            // }
-          ]
-        }
-      });
-      break;
     // Note:  Used for development ONLY - Remove for production!
     case 'develop':
       actions.setWebpackConfig({
@@ -36,19 +16,4 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions, plugins  }) =
       })
       break;
   }
-  
-  actions.setWebpackConfig({
-    plugins: 
-      [
-        plugins.define({
-          $: 'jQuery',
-        }),
-        plugins.define({
-          jQuery: 'jQuery',
-        }),
-        plugins.define({
-          'window.jQuery': 'jQuery',
-        })
-      ]
-  });
 };
