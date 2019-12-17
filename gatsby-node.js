@@ -9,6 +9,18 @@
 
 exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions, plugins  }) => {
   switch (stage) {
+    case 'build-html':
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /wowjs/,
+              use: [loaders.null()]
+            }
+          ]
+        }
+      });
+      break;
     // Note:  Used for development ONLY - Remove for production!
     case 'develop':
       actions.setWebpackConfig({

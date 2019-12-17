@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 // Plugins
 // import $ from 'jquery'
+import WOW from 'wowjs';
 import smoothscroll from 'smoothscroll-polyfill'
 
 // Images
@@ -48,7 +49,6 @@ import { basic_anchor, basic_alarm, basic_globe, basic_headset, basic_book_penci
 // Loadable Components - Client only components
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel'));
-const WOW = Loadable(() => import('wowjs'));
 const Bootstrap = Loadable(() => import('bootstrap'))
 // global.jQuery = require('jquery');
 // require('bootstrap');
@@ -56,7 +56,8 @@ const Bootstrap = Loadable(() => import('bootstrap'))
 const IndexPage = () => {
   useEffect(() => {
     smoothscroll.polyfill();
-    WOW.init()
+    const wow = new WOW.WOW();
+    wow.init();
 
     // ----------------------------------------------------------------
     // Navigation Menu panel
@@ -94,7 +95,7 @@ const IndexPage = () => {
 
   const handleResize = (e) => {
     // Mobile menu max height
-    if($(window).width() <= 1024) {
+    if(window.width <= 1024) {
         setMobile(true);
         setWindowMaxHeight(window.height - 65);
     } else {
